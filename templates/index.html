@@ -31,8 +31,8 @@
 		<!--  CONTACT LIST -->
 		<section class="contacts-library">
 			<ul class="contacts-list">
-				{% for contact in contacts %}
-				<a href="contact-profile.html">
+				{% for contact in contacts reversed %}
+				<a href="{% url 'profile' contact.id %}" style="text-decoration: none;">
 					<div class="contact-section">
 						<li class="list__item">
 							<p class="contact-name">{{contact.full_name | title}}</p>
